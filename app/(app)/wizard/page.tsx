@@ -12,7 +12,7 @@ const Wizard = () => {
     >
       <section
         role="container"
-        className="flex flex-col items-center justify-between p-2 min-h-dvh"
+        className="flex flex-col items-center max-h-screen p-2"
       >
         <Header />
         <Content />

@@ -24,10 +24,6 @@ const Header = (props: Props) => {
           <Button variant={"outline"} size={"icon"}>
             <Info />
           </Button>
-
-          <Button variant={"outline"} size={"icon"}>
-            <MoreVertical />
-          </Button>
         </div>
       </div>
     </header>
