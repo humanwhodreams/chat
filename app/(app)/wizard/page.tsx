@@ -1,4 +1,6 @@
-import React from "react";
+import Content from "@/components/message-engine/panel-two/content";
+import Footer from "@/components/message-engine/panel-two/footer";
+import Header from "@/components/message-engine/panel-two/header";
 
 const Wizard = () => {
   return (
@@ -6,9 +8,16 @@ const Wizard = () => {
       style={{
         flexGrow: 3,
       }}
-      className="sm:ml-4"
+      role="panel-two"
     >
-      Wizard page
+      <section
+        role="container"
+        className="flex flex-col items-center justify-between p-2 min-h-dvh"
+      >
+        <Header />
+        <Content />
+        <Footer />
+      </section>
     </section>
   );
 };
