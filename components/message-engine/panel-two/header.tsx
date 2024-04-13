@@ -1,7 +1,6 @@
-import { Info, MoreVertical, SquareLibrary } from "lucide-react";
-
 import { Button } from "@/components/ui/button";
-import React from "react";
+import { Info } from "lucide-react";
+import PANELTHREE from "../panel-three/panel-three";
 import UserInfoLink from "@/components/links/user-info";
 
 type Props = {};
@@ -21,7 +20,7 @@ const Header = (props: Props) => {
         </div>
 
         <div className="space-x-4">
-          <Button variant={"outline"} size={"icon"}>
+          <Button variant={"ghost"} size={"icon"}>
             <Info />
           </Button>
         </div>
