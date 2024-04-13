@@ -19,8 +19,8 @@ export default function Home() {
           Message with ease, super fast
         </TypographyH1>
         <TypographyP className="max-w-[75ch] text-sm duration-700 animate-in fade-in-5 slide-in-from-top-2 md:text-base [&:not(:first-child)]:mt-6 text-balance">
-          Chwizard is an open-source platform that allows you to send messages
-          anywhere, anytime to any place with ease. It's fast, secure, and easy
+          Chwizard is an open-source instant messaging platform that allows you to send messages
+          anywhere, anytime to any place with ease. It is fast, secure, and easy
           to use.
         </TypographyP>
         <div className="items-center justify-center mt-8 space-y-3 duration-700 gap-x-3 animate-in fade-in-30 sm:flex sm:space-y-0">
