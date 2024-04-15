@@ -1,13 +1,11 @@
-import * as React from "react";
+import { Button, buttonVariants } from "@/components/ui/button";
 
 import { Badge } from "@/components/ui/badge";
-import CommandK from "@/components/command-k";
 import ExternalLink from "@/components/ui/external-link";
 import { GithubLogo } from "@/components/icons/external";
 import Link from "next/link";
 import { Separator } from "../ui/separator";
 import { ThemeToggle } from "../theme-toggle";
-import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const Header = () => {
@@ -35,7 +33,13 @@ const Header = () => {
             </Link>
           </div>
         </div>
-        <div className="flex items-center space-x-1">
+        <div className="flex items-center space-x-2">
+          <Button variant={"ghost"} size={"sm"} asChild>
+            <Link href={"#"}>❔Contribute</Link>
+          </Button>
+          <Button variant={"ghost"} size={"sm"} asChild>
+            <Link href={"#"}>🗺️Roadmap</Link>
+          </Button>
           <ExternalLink
             href="https://github.com/fromenoabasi/chatwizard"
             className={buttonVariants({
@@ -45,8 +49,14 @@ const Header = () => {
           >
             <GithubLogo width={20} name="GitHub Repository" />
           </ExternalLink>
-          <Separator orientation="vertical" className="h-6"/>
+          <Separator orientation="vertical" className="h-6" />
           <ThemeToggle />
+          <Button variant="secondary" asChild>
+            <Link href={"/sign-in"}>Sign in</Link>
+          </Button>
+          <Button>
+            <Link href={"/sign-up"}>Sign up</Link>
+          </Button>
         </div>
       </div>
     </nav>

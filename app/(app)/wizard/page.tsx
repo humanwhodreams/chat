@@ -20,7 +20,7 @@ const Wizard = () => {
         <Content />
         <Footer />
       </section>
-      <PANELTHREE className="w-96"/>
+      <PANELTHREE className="w-96 hidden"/>
     </section>
   );
 };

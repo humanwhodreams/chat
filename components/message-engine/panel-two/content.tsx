@@ -1,10 +1,24 @@
+"use client"
+
+import * as React from "react"
+
 import { Receiver } from "./message-bubbles/receiver";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Sender } from "./message-bubbles/sender";
 
-type Props = {};
+const Content = () => {
 
-const Content = (props: Props) => {
+  const scrollToBottom = React.useRef<HTMLDivElement>(null)
+
+  React.useEffect(() => {
+    if (scrollToBottom.current === null) return
+
+    scrollToBottom.current.scrollIntoView({
+      behavior: "smooth"
+    })
+  }, [])
+  
+
   return (
     <ScrollArea role="message-core" className="w-full h-screen pt-2 pr-4 scroll-m-10">
       <Receiver />
@@ -19,6 +33,7 @@ const Content = (props: Props) => {
       <Sender />
       <Receiver />
       <Sender />
+      <div ref={scrollToBottom}/>
     </ScrollArea>
   );
 };

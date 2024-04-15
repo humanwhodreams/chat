@@ -9,22 +9,6 @@ const VirtualList = (props: Props) => {
   return (
     <ScrollArea className="h-screen px-2 scroll-m-10">
       <MessageCard />
-      <MessageCard />
-      <MessageCard />
-      <MessageCard />
-      <MessageCard />
-      <MessageCard />
-      <MessageCard />
-      <MessageCard />
-      <MessageCard />
-      <MessageCard />
-      <MessageCard />
-      <MessageCard />
-      <MessageCard />
-      <MessageCard />
-      <MessageCard />
-      <MessageCard />
-      <MessageCard />
       <EncrptyionStatus />
     </ScrollArea>
   );

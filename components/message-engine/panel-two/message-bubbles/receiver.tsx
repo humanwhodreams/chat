@@ -15,7 +15,7 @@ const Receiver = (props: Props) => {
           <p className="max-w-xl text-sm text-foreground">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius voluptatem repellendus asperiores laudantium nisi blanditiis corporis eaque, accusantium voluptatum delectus, incidunt sequi nihil natus, totam ab! Aut iste magni dolorum!</p>
         </div>
 
-        <span className="mt-1.5 flex items-center gap-x-1 text-xs text-muted-foreground">
+        <span className="mt-1.5 flex items-center gap-x-1 text-xs text-muted-foreground pb-4">
           <CheckCheck className="flex-shrink-0 size-3" />
           Sent
         </span>

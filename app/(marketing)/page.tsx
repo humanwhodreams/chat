@@ -36,7 +36,7 @@ export default function Home() {
               size={18}
               className="duration-300 group-hover:rotate-[14deg]"
             />
-            <span className="ml-2">Start Messaging</span>
+            <span className="ml-2">Get Started</span>
           </Link>
           <ExternalLink
             href="https://github.com/fromenoabasi/chatwizard"

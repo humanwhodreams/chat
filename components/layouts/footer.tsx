@@ -23,14 +23,14 @@ const Footer = (props: Props) => {
             size={14}
             className="text-red-500 group-hover:transform group-hover:animate-pulse"
           />
-          <p>Made by Enoabasi</p>
+          <p>An experiment of  Enoabasi</p>
         </div>
         <ExternalLink
           href="https://twitter.com/from_enoabasi"
           className="flex items-center space-x-2"
         >
           <XLogo className="w-3 h-3" />
-          <p className="hidden md:block">Twitter</p>
+          <p className="hidden md:block">X formerly know as Twitter</p>
           <ArrowUpRight size={14} />
         </ExternalLink>
       </div>

@@ -19,7 +19,7 @@ const EmojiPicker = ({ onSelect }: Props<string>) => {
       data={data}
       theme={theme}
       showPreview={false}
-      showSkinTones={false}
+      showSkinTones={true}
       onEmojiSelect={(emoji: any) => {
         if (!emoji?.native) return;
 
