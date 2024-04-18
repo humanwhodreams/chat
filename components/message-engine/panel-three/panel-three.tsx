@@ -9,11 +9,14 @@ type Props = {
 
 const PANELTHREE = (props: Props) => {
   return (
-    <div className={cn(props.className, "min-h-screen")}>
-      <div className="flex flex-col items-center justify-between h-screen gap-4 p-2">
-        <Header />
-        <Content />
-      </div>
+    <div
+      className={cn(
+        props.className,
+        "flex flex-col items-center justify-between h-screen"
+      )}
+    >
+      <Header />
+      <Content />
     </div>
   );
 };

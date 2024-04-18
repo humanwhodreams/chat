@@ -1,6 +1,6 @@
 import { ArrowUpRight, HomeIcon } from "lucide-react";
 
-import ExternalLink from "@/components/ui/external-link";
+import ExternaLink from "@/components/ui/external-link";
 import { Footer } from "@/components/layouts/footer";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
@@ -27,13 +27,13 @@ const NotFound = async () => {
               <HomeIcon size={18} className="mr-2"/>
               <span>Go back home</span>
             </Link>
-            <ExternalLink
+            <ExternaLink
               className={buttonVariants({ variant: "outline" })}
               href="#"
             >
               <span>Create issue</span>
               <ArrowUpRight size={18} className="ml-2"/>
-            </ExternalLink>
+            </ExternaLink>
           </div>
         </div>
       </div>

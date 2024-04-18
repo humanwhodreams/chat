@@ -8,7 +8,7 @@ type Props = {
 
 const Layout = (props: Props) => {
   return (
-    <main className="flex items-start min-h-dvh bg-secondary">
+    <main className="flex items-start min-h-dvh bg-background">
       <PANELONE />
       {props.children}
     </main>

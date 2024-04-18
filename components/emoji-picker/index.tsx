@@ -52,11 +52,19 @@ export const EmojiInput = ({ val, onChange }: Props<string>) => {
           <span className="sr-only">add emojicon</span>
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-fit" align="start" sideOffset={14}>
-        <p className="text-sm font-medium">Select an emoji</p>
-        <span className="text-sm text-muted-foreground pt-2">
-          Emojis are added to the end of text.
-        </span>
+      <PopoverContent className="p-0 w-fit" align="start" sideOffset={14}>
+        <div className="p-2">
+          <p className="text-sm font-medium">Select an emoji</p>
+          <div>
+            <span className="inline-flex items-center bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-red-900 dark:text-red-300">
+              <span className="w-2 h-2 bg-red-500 rounded-full me-1"></span>
+              Bug
+            </span>
+            <span className="pt-2 ml-2 text-xs text-muted-foreground">
+              Emojis are added to the end of text.
+            </span>
+          </div>
+        </div>
         <Separator className="my-2" />
         <EmojiPicker
           onSelect={(val) => {

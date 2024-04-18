@@ -1,29 +1,29 @@
+import { ArrowLeft } from "lucide-react";
+import Avatar from "boring-avatars";
 import { Button } from "@/components/ui/button";
-import { Info } from "lucide-react";
-import PANELTHREE from "../panel-three/panel-three";
-import UserInfoLink from "@/components/links/user-info";
+import ContactInfo from "./contact-info";
 
-type Props = {};
-
-const Header = (props: Props) => {
+const Header = () => {
   return (
-    <header className="w-full rounded-md shadow-sm bg-background">
+    <header className="grid w-full grid-cols-1 border-b bg-muted">
       <div className="flex items-center justify-between px-4 py-2">
-        <div className="flex items-start space-x-2">
-          <UserInfoLink />
-          <div>
-            <span className="font-semibold">John Doe</span>
-            <p className="text-sm text-muted-foreground">
-              This is my amazing bio
-            </p>
+        <div className="flex items-center">
+          <div className="block lg:hidden ">
+            <Button variant={"ghost"} size={"icon"} className="mr-4">
+              <ArrowLeft size={20} />
+            </Button>
           </div>
+
+          <Avatar
+            size={40}
+            name={"Enoabasi Essien"}
+            variant="bauhaus"
+            colors={["#92A1C6", "#146A7C", "#F0AB3D", "#C271B4", "#C20D90"]}
+          />
+          <p className="ml-4 font-medium">Enoabasi Essien</p>
         </div>
 
-        <div className="space-x-4">
-          <Button variant={"ghost"} size={"icon"}>
-            <Info />
-          </Button>
-        </div>
+        <ContactInfo />
       </div>
     </header>
   );

@@ -5,7 +5,11 @@ type Props = {
 };
 
 const AuthenticationLayout = (props: Props) => {
-  return <div>{props.children}</div>;
+  return (
+    <main className="flex flex-col items-center justify-center min-h-screen bg-background">
+      {props.children}
+    </main>
+  );
 };
 
 export default AuthenticationLayout;

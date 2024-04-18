@@ -9,9 +9,7 @@ import { Button, buttonVariants } from "@/components/ui/button";
 
 import { cn } from "@/lib/utils";
 
-type Props = {};
-
-const SharedMedia = (props: Props) => {
+const SharedMedia = () => {
   return (
     <Accordion type="multiple">
       <AccordionItem value="item-1" className="border-none">
@@ -25,27 +23,27 @@ const SharedMedia = (props: Props) => {
           )}
         >
           Shared media
-          <ArrowRightCircle className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200" />
+          <ArrowRightCircle className="w-4 h-4 transition-transform duration-200 shrink-0 text-muted-foreground" />
         </AccordionTrigger>
-        <AccordionContent className="pb-0 border-l-2 ">
-          <Button variant={"ghost"} className="w-full justify-between">
+        <AccordionContent className="pb-0">
+          <Button variant={"ghost"} className="justify-between w-full">
             <span className="flex items-center">
-              <Image className="size-4 mr-2" />
+              <Image className="mr-2 size-4" />
               Media
             </span>
 
             <ArrowRight className="size-4" />
           </Button>
-          <Button variant={"ghost"} className="w-full justify-between">
+          <Button variant={"ghost"} className="justify-between w-full">
             <span className="flex items-center">
-              <File className="size-4 mr-2" />
+              <File className="mr-2 size-4" />
               Documents
             </span>
             <ArrowRight className="size-4" />
           </Button>
-          <Button variant={"ghost"} className="w-full justify-between">
+          <Button variant={"ghost"} className="justify-between w-full">
             <span className="flex items-center">
-              <Link className="size-4 mr-2" />
+              <Link className="mr-2 size-4" />
               Links
             </span>
             <ArrowRight className="size-4" />

@@ -8,7 +8,7 @@ type Props = {
   className?: string;
 };
 
-const ExternalLink = (props: Props) => {
+const ExternaLink = (props: Props) => {
   return (
     <a
       href={props.href}
@@ -21,4 +21,4 @@ const ExternalLink = (props: Props) => {
   );
 };
 
-export default ExternalLink
+export default ExternaLink

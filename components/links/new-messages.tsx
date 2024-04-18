@@ -1,21 +1,37 @@
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { MessageSquarePlus, Users } from "lucide-react";
+
 import { Button } from "../ui/button";
-import React from "react";
-import { SquarePen } from "lucide-react";
 
-type Props = {};
-
-const NewMessagesLink = (props: Props) => {
+const NewMessage = () => {
   return (
     <>
-      <Button variant={"outline"} size={"icon"} className="group">
-        <SquarePen
-          size={20}
-          className="transition-colors text-muted-foreground group-hover:text-foreground"
-        />
-        <span className="sr-only">New message</span>
-      </Button>
+      <DropdownMenu>
+        <DropdownMenuTrigger title="New" asChild>
+          <Button variant={"ghost"} size={"icon"} className="group">
+            <MessageSquarePlus size={20} />
+            <span className="sr-only">New message</span>
+          </Button>
+        </DropdownMenuTrigger>
+
+        <DropdownMenuContent align="end">
+          <DropdownMenuItem>
+            <MessageSquarePlus className="w-4 h-4 mr-2" />
+            <span>New message</span>
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <Users className="w-4 h-4 mr-2" />
+            <span>New group chat</span>
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
     </>
   );
 };
 
-export default NewMessagesLink;
+export default NewMessage;

@@ -1,12 +1,12 @@
 import { Button, buttonVariants } from "@/components/ui/button";
 
-import { Badge } from "@/components/ui/badge";
-import ExternalLink from "@/components/ui/external-link";
-import { GithubLogo } from "@/components/icons/external";
+import ExternaLink from "@/components/ui/external-link";
+import { Github } from "../icons/github";
 import Link from "next/link";
 import { Separator } from "../ui/separator";
 import { ThemeToggle } from "../theme-toggle";
 import { cn } from "@/lib/utils";
+import { siteConfig } from "@/config/site-config";
 
 const Header = () => {
   return (
@@ -24,31 +24,28 @@ const Header = () => {
               href="/"
               className="flex items-center space-x-3 transition-opacity hover:opacity-80 rtl:space-x-reverse"
             >
-              {/* TODO Add software logo here */}
-              {/* <Logo width={30} /> */}
-              <span className="self-center text-lg font-medium tracking-tight whitespace-nowrap dark:text-white">
-                Chwizard
+              <span className="self-center text-lg font-semibold tracking-tight whitespace-nowrap">
+                {siteConfig.name}
               </span>
-              <Badge className="hidden cursor-pointer md:block">beta</Badge>
             </Link>
           </div>
         </div>
-        <div className="flex items-center space-x-2">
+        <div className="items-center hidden space-x-2 sm:flex">
           <Button variant={"ghost"} size={"sm"} asChild>
             <Link href={"#"}>❔Contribute</Link>
           </Button>
           <Button variant={"ghost"} size={"sm"} asChild>
             <Link href={"#"}>🗺️Roadmap</Link>
           </Button>
-          <ExternalLink
+          <ExternaLink
             href="https://github.com/fromenoabasi/chatwizard"
             className={buttonVariants({
               variant: "ghost",
               size: "icon",
             })}
           >
-            <GithubLogo width={20} name="GitHub Repository" />
-          </ExternalLink>
+            <Github width={20} name="GitHub Repository" />
+          </ExternaLink>
           <Separator orientation="vertical" className="h-6" />
           <ThemeToggle />
           <Button variant="secondary" asChild>

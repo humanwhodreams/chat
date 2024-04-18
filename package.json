@@ -25,6 +25,7 @@
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-switch": "^1.0.3",
     "@radix-ui/react-tooltip": "^1.0.7",
+    "avvvatars-react": "^0.4.2",
     "boring-avatars": "^1.10.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",

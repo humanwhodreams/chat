@@ -1,20 +1,22 @@
-import NewMessagesLink from "@/components/links/new-messages";
+import NewMessage from "@/components/links/new-messages";
 import SearchBar from "./search-bar";
 import SettingsLink from "@/components/links/settings";
-import UserInfoLink from "@/components/links/user-info";
+import UserProfile from "./user-profile";
 
 const Header = () => {
   return (
-    <section role="panel-one-header" className="grid w-full grid-cols-1 gap-4 p-2">
-      <div className="flex items-center justify-between">
-        <UserInfoLink />
+    <header className="grid w-full grid-cols-1 border-b">
+      <div className="flex items-center justify-between p-2 border-b">
+        <UserProfile />
         <div className="ml-4 space-x-2">
-          <NewMessagesLink />
+          <NewMessage />
           <SettingsLink />
         </div>
       </div>
-      <SearchBar />
-    </section>
+      <div className="p-2">
+        <SearchBar />
+      </div>
+    </header>
   );
 };
 

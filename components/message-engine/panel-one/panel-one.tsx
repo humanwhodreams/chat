@@ -5,7 +5,7 @@ type Props = {};
 
 export default function PANELONE({}: Props) {
   return (
-    <aside className="flex flex-col gap-y-2 w-[449px] max-w-[470px] max-h-screen">
+    <aside className="flex-col gap-y-2 w-[570px] max-h-screen border-r border-border hidden lg:flex">
       <Header />
       <VirtualList />
     </aside>

@@ -1,4 +1,4 @@
 export const siteConfig = {
-  name: "Chatwire",
-  description: ""
+  name: "Choc",
+  description: "Send messages anywhere, anytime, to any place with ease."
 } as const

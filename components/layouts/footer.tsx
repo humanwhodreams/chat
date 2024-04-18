@@ -1,9 +1,9 @@
 import { ArrowUpRight, Heart } from "lucide-react";
 
-import ExternalLink from "@/components/ui/external-link";
-import { XLogo } from "../icons/external";
+import ExternaLink from "@/components/ui/external-link";
 import { cn } from "@/lib/utils";
 import { type ClassValue } from "clsx";
+import { X } from "../icons/twitter";
 
 interface Props {
   className?: ClassValue;
@@ -23,16 +23,16 @@ const Footer = (props: Props) => {
             size={14}
             className="text-red-500 group-hover:transform group-hover:animate-pulse"
           />
-          <p>An experiment of  Enoabasi</p>
+          <p>An experiment</p>
         </div>
-        <ExternalLink
+        <ExternaLink
           href="https://twitter.com/from_enoabasi"
           className="flex items-center space-x-2"
         >
-          <XLogo className="w-3 h-3" />
+          <X className="w-3 h-3" />
           <p className="hidden md:block">X formerly know as Twitter</p>
           <ArrowUpRight size={14} />
-        </ExternalLink>
+        </ExternaLink>
       </div>
     </footer>
   );

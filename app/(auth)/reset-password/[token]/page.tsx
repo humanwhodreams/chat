@@ -11,46 +11,20 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Link from "next/link";
-import { siteConfig } from "@/config/site-config";
 
-export default function SignUp() {
+const ResetPassword = ({ params }: { params: { token: string } }) => {
   return (
     <Card className="max-w-3xl mx-auto border-none shadow-none">
       <CardHeader>
-        <CardTitle className="text-xl">Create an Account</CardTitle>
+        <CardTitle className="text-xl">
+          Reset your password &mdash; {params.token}
+        </CardTitle>
         <CardDescription>
-          Welcome. Enter your credentials to create an account with {siteConfig.name}
+          Enter your new password, protect against trouble makers.
         </CardDescription>
       </CardHeader>
       <CardContent>
         <div className="grid gap-4">
-          <div className="grid gap-2">
-            <Label htmlFor="display-name">Display name</Label>
-            <Input
-              id="display-name"
-              type="text"
-              placeholder="Enter display name..."
-              required
-            />
-          </div>
-          <div className="grid gap-2">
-            <Label htmlFor="username">Username</Label>
-            <Input
-              id="username"
-              type="text"
-              placeholder="Enter username..."
-              required
-            />
-          </div>
-          <div className="grid gap-2">
-            <Label htmlFor="email">Email address</Label>
-            <Input
-              id="email"
-              type="email"
-              placeholder="Enter email address..."
-              required
-            />
-          </div>
           <div className="grid gap-2">
             <Label htmlFor="password">Password</Label>
             <div className="flex rounded-lg shadow-sm bg-secondary">
@@ -94,11 +68,11 @@ export default function SignUp() {
             </div>
           </div>
           <Button type="submit" className="w-full">
-            Create an account
+            Reset password
           </Button>
         </div>
         <div className="mt-4 text-sm text-center">
-          Already have an account?{" "}
+          Remembered password?{" "}
           <Link href="/sign-in" className="underline">
             Sign in
           </Link>
@@ -106,4 +80,6 @@ export default function SignUp() {
       </CardContent>
     </Card>
   );
-}
+};
+
+export default ResetPassword;

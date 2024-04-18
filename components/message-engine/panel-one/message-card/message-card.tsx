@@ -1,35 +1,48 @@
 import {
   Card,
-  CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 
+import Avatar from "boring-avatars";
 import MessageCardActions from "./message-card-actions";
-import React from "react";
-import UserInfoLink from "@/components/links/user-info";
 
-type Props = {};
+interface Props {
+  name: string;
+  date: string;
+  message: string;
+}
 
-const MessageCard = (props: Props) => {
+const MessageCard = (props: Partial<Props>) => {
   return (
-    <Card className="my-1 rounded-md shadow-none">
-      <CardHeader className="relative p-4 group">
-        <div className="flex items-start gap-4">
-          <UserInfoLink className={"flex-shrink-0"} />
-          <div className="flex flex-col space-y-1.5 w-full">
+    <Card className="border-t-0 border-l-0 border-r-0 rounded-none shadow-none hover:bg-secondary">
+      <CardHeader className="relative p-2 group">
+        <div className="flex items-center">
+          <Avatar
+            size={50}
+            name={props.name}
+            variant="bauhaus"
+            colors={["#92A1C6", "#146A7C", "#F0AB3D", "#C271B4", "#C20D90"]}
+          />
+          <div className="flex flex-col w-full ml-4">
             <div className="flex items-center justify-between">
-              <CardTitle>Jane Doe</CardTitle>
-              <span className="text-sm text-muted-foreground">4/11/2024</span>
+              <CardTitle className="truncate max-w-[200px] font-medium" title={props.name}>
+                {props.name}
+              </CardTitle>
+              <span className="text-xs font-medium text-muted-foreground">
+                {props.date}
+              </span>
             </div>
-            <CardDescription className="truncate max-w-[200px]">
-              Hello, how are you doing? It&apos;s veronica from yoga class.
+            <CardDescription
+              className="truncate max-w-[200px]"
+              title={props.message}
+            >
+              {props.message}
             </CardDescription>
           </div>
         </div>
-        <div className="absolute transition-transform scale-0 bottom-4 right-4 group-hover:scale-100">
+        <div className="absolute bottom-2 right-4">
           <MessageCardActions />
         </div>
       </CardHeader>

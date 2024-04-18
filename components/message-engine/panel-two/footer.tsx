@@ -8,10 +8,8 @@ import { Button } from "@/components/ui/button";
 import { EmojiInput } from "@/components/emoji-picker";
 import { Input } from "@/components/ui/input";
 
-type Props = {};
-
-const Footer = (props: Props) => {
-  const [emoji, setEmoji] = React.useState("");
+const Footer = () => {
+  const [emoji] = React.useState("");
   const [text, setText] = React.useState("");
 
   const onChange = (e: string) => {
@@ -19,7 +17,7 @@ const Footer = (props: Props) => {
   };
 
   return (
-    <footer className="w-full px-4 py-2 rounded-md shadow-sm bg-background">
+    <footer className="w-full px-4 py-2 border-t bg-muted">
       <form>
         <label htmlFor="chat" className="sr-only">
           Your message
@@ -28,7 +26,7 @@ const Footer = (props: Props) => {
           <Button variant={"ghost"} size={"icon"} className="group">
             <ImagePlus
               size={20}
-              className="text-muted-foreground group-hover:text-foreground"
+              className="flex-shrink-0 text-muted-foreground group-hover:text-foreground"
             />
             <span className="sr-only">upload image</span>
           </Button>
@@ -36,7 +34,8 @@ const Footer = (props: Props) => {
           <Input
             placeholder="Enter message..."
             type="text"
-            className="w-full"
+            id="chat"
+            className="w-full lg:hover:shadow-md"
             value={text}
             onChange={(e) => setText(e.target.value)}
           />
