@@ -10,7 +10,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Divide, ExternalLink, Trash2, X } from "lucide-react";
+import { ExternalLink, Trash2 } from "lucide-react";
 import {
   Select,
   SelectContent,

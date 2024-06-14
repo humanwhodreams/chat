@@ -4,7 +4,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { MessageSquarePlus, Users } from "lucide-react";
+import { MessageCirclePlus, MessageSquarePlus, Users } from "lucide-react";
 
 import { Button } from "../ui/button";
 
@@ -13,8 +13,8 @@ const NewMessage = () => {
     <>
       <DropdownMenu>
         <DropdownMenuTrigger title="New" asChild>
-          <Button variant={"ghost"} size={"icon"} className="group">
-            <MessageSquarePlus size={20} />
+          <Button variant={"ghost"} size={"icon"}>
+            <MessageCirclePlus className="flex-shrink-0 size-5" />
             <span className="sr-only">New message</span>
           </Button>
         </DropdownMenuTrigger>

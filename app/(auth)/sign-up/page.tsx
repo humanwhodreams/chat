@@ -1,3 +1,7 @@
+"use client";
+
+import * as React from "react";
+
 import {
   Card,
   CardContent,
@@ -14,12 +18,14 @@ import Link from "next/link";
 import { siteConfig } from "@/config/site-config";
 
 export default function SignUp() {
+  const [isHidden, setIsHidden] = React.useState(true);
   return (
     <Card className="max-w-3xl mx-auto border-none shadow-none">
       <CardHeader>
         <CardTitle className="text-xl">Create an Account</CardTitle>
         <CardDescription>
-          Welcome. Enter your credentials to create an account with {siteConfig.name}
+          Welcome. Enter your credentials to create an account with{" "}
+          {siteConfig.name}
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -56,7 +62,7 @@ export default function SignUp() {
             <div className="flex rounded-lg shadow-sm bg-secondary">
               <Input
                 id="password"
-                type="password"
+                type={isHidden ? "password" : "text"}
                 className="w-full px-4 py-3 rounded-r-none shadow-none rounded-s-lg bg-background focus:z-10"
                 placeholder="Enter password..."
               />
@@ -65,9 +71,13 @@ export default function SignUp() {
                 variant={"outline"}
                 size={"icon"}
                 className="w-[2.875rem] h-9 rounded-e-md border-l-0 rounded-l-none"
+                onClick={() => setIsHidden((prev) => !prev)}
               >
-                {/* <EyeOff className="flex-shrink-0 text-muted-foreground size-5" /> */}
-                <Eye className="flex-shrink-0 text-muted-foreground size-5" />
+                {isHidden ? (
+                  <Eye className="flex-shrink-0 text-muted-foreground size-5" />
+                ) : (
+                  <EyeOff className="flex-shrink-0 text-muted-foreground size-5" />
+                )}
                 <span className="sr-only">toggle password</span>
               </Button>
             </div>
@@ -77,7 +87,7 @@ export default function SignUp() {
             <div className="flex rounded-lg shadow-sm bg-secondary">
               <Input
                 id="confirm-password"
-                type="password"
+                type={isHidden ? "password" : "text"}
                 className="w-full px-4 py-3 rounded-r-none shadow-none rounded-s-lg bg-background focus:z-10"
                 placeholder="Enter confirm password..."
               />
@@ -85,10 +95,14 @@ export default function SignUp() {
                 type="button"
                 variant={"outline"}
                 size={"icon"}
+                onClick={() => setIsHidden((prev) => !prev)}
                 className="w-[2.875rem] h-9 rounded-e-md border-l-0 rounded-l-none"
               >
-                {/* <EyeOff className="flex-shrink-0 text-muted-foreground size-5" /> */}
-                <Eye className="flex-shrink-0 text-muted-foreground size-5" />
+                {isHidden ? (
+                  <Eye className="flex-shrink-0 text-muted-foreground size-5" />
+                ) : (
+                  <EyeOff className="flex-shrink-0 text-muted-foreground size-5" />
+                )}
                 <span className="sr-only">toggle password</span>
               </Button>
             </div>

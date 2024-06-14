@@ -1,3 +1,4 @@
+import AddNewUser from "../panel-two/add-new-user";
 import NewMessage from "@/components/links/new-messages";
 import SearchBar from "./search-bar";
 import SettingsLink from "@/components/links/settings";
@@ -8,7 +9,8 @@ const Header = () => {
     <header className="grid w-full grid-cols-1 border-b">
       <div className="flex items-center justify-between p-2 border-b">
         <UserProfile />
-        <div className="ml-4 space-x-2">
+        <div className="ml-4">
+          <AddNewUser />
           <NewMessage />
           <SettingsLink />
         </div>

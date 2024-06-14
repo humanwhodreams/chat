@@ -23,7 +23,7 @@ const SettingsLink = () => {
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant={"ghost"} size={"icon"} className="group">
-            <MoreVertical size={20} />
+            <MoreVertical className="flex-shrink-0 size-5" />
             <span className="sr-only">Menu</span>
           </Button>
         </DropdownMenuTrigger>

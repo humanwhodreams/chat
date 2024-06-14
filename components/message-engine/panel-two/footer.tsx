@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import { ImagePlus, Send } from "lucide-react";
+import { CornerDownLeft, ImagePlus, Send } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { EmojiInput } from "@/components/emoji-picker";
@@ -41,7 +41,7 @@ const Footer = () => {
           />
           <Button variant={"default"} size={"sm"} className="group">
             Send
-            <Send className="flex-shrink-0 ml-2 size-4 text-muted-foreground group-hover:text-primary-foreground" />
+            <CornerDownLeft className="flex-shrink-0 ml-2 size-4 text-muted-foreground group-hover:text-primary-foreground" />
           </Button>
         </div>
       </form>
